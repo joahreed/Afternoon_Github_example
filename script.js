@@ -1,34 +1,40 @@
-/* 
-  String: Is Palindrome
-  Create a function that returns a boolean whether the string is a strict palindrome. 
-    - palindrome = string that is same forwards and backwards
-  
-  Do not ignore spaces, punctuation or capitalization
-*/
-// RIOT Read Input Output Talk
-function isPalindrome(str) { 
-    for (let left = 0; left < str.length/2; left++) {
-        let right = str.length-1-left;
-        if(str[left] != str[right]){
-            return false;
-        }
-    }
-    return true;
+// The Fibonacci sequence is defined as follows: the first number of the sequence is 0, 
+// the second number is 1, and the nth number is the sum of the (n -1)th and (n -2)th numbers.
+// Write a function that takes in an integer n and returns the nth Fibonacci number.
+
+// Important note: the Fibonacci sequence is often defined with its first two numbers as F0 = 0 and F1 = 1.
+//  For the purpose of this question, the first Fibonnacci number is F0; 
+//  therefore, getNthFib(1) is equal to F0, getNthFib(2) is equal to F1, etc..
+
+
+
+
+//counting from 1 in the Fibonnacci Sequence
+// 0,1,1,2,3,5,8,13,21,34,55
+
+
+
+// Because: 0 + 1 = 1, and 1 + 1 = 2, and 1 + 2 = 3, and 2 + 3 = 5 and so on.....
+
+
+function getNthFib(n) {
+let lastTwo = [0,1];
+//Your code here
+
+
+
+
+return n > 1 ? lastTwo[1] : lastTwo[0];
 }
+getNthFib();
 
 
-const str1 = "a x a";
-const expected1 = true;
-isPalindrome(str1);
 
-const str2 = "racecar";
-const expected2 = true;
-isPalindrome(str2);
-
-const str3 = "Dud";
-const expected3 = false;
-isPalindrome(str3);
-
-const str4 = "oho!";
-const expected4 = false;
-isPalindrome(str4);
+function getNthFib(n){
+if (n>1) {
+    console.log(lastTwo[1])
+}
+else {
+    console.log(lastTwo[0])
+}
+}
